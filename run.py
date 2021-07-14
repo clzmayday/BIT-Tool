@@ -25,23 +25,23 @@ def go_last(last_p):
 
 def exit_button(last):
     clear_frame()
-    title = tk.Label(app, text="Are you sure to close the tools?", font=("Arial", 20), pady=120)
+    title = tk.Label(app, text="Are you sure to close the tools?\n您确定要退出？", font=("Arial", 20), pady=120)
     title.pack()
-    yes = tk.Button(text="Yes", font=("Arial", 20), command=sys.exit)
+    yes = tk.Button(text="Yes 是", font=("Arial", 20), command=sys.exit)
     yes.pack(side=LEFT, padx=120)
-    no = tk.Button(text="No", font=("Arial", 20), command=lambda: go_last(last))
+    no = tk.Button(text="No 否", font=("Arial", 20), command=lambda: go_last(last))
     no.pack(side=RIGHT, padx=120)
 
 
 def start(last="start"):
     clear_frame()
-    title = tk.Label(app, text="Boing International Trading Assistant Tools\n\n伯英工具箱", font=("Arial", 20), pady=120)
-    title.pack()
+    title_t = tk.Label(app, text="Boing International Trading Assistant Tools\n\n伯英工具箱", font=("Arial", 20), pady=120)
+    title_t.pack()
 
-    version = tk.Label(app, text="Version 0.0.1", font=("Arial", 10))
-    version.pack(side=BOTTOM, pady=25)
-    exit = tk.Button(text="Exit", font=("Arial", 20), command=lambda: exit_button("start"))
-    exit.pack(side=BOTTOM,  pady=50)
+    version_t = tk.Label(app, text="Version 0.0.1", font=("Arial", 10))
+    version_t.pack(side=BOTTOM, pady=25)
+    exit_b = tk.Button(text="Exit 退出", font=("Arial", 20), command=lambda: exit_button("start"))
+    exit_b.pack(side=BOTTOM,  pady=50)
 
 
 start()
